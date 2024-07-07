@@ -1,0 +1,267 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+#inicio {
+    background-image: url('/images/compressjpeg/1562923995317-min.jpg');
+}
+#servicios {
+    background-image: url('/images/compressjpeg/designecologist-1200x800.jpg');
+}
+#testimonios {
+    background-image: url('/images/compressjpeg/1562924014610-min.jpg');
+}
+#contacto {
+    background-image: url('/images/compressjpeg/1562924038670-min.jpg');
+}
+/* Estilo común para todos los boxes */
+.box {
+    background-color: rgba(249, 249, 249, 0.8); /* Color de fondo con opacidad */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre los boxes */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*ESTILO PARA MENU DESPLEGABLE*/
+  
+  #sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #ffe2e2;
+    left: -200px;
+    transition: all 500ms linear;
+    z-index: 10;
+  }
+  
+  #sidebar.active {
+    left: 0px;
+  }
+  
+  #sidebar ul li {
+    color: rgba(58, 58, 58, 0.493);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    text-align: center;
+  }
+  
+  .menu img {
+    width: 24px; /* Establece el ancho deseado para los logos */
+    height: auto; /* Mantiene la proporción de aspecto */
+}
+  
+  .logo {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; 
+  }
+  
+#toggle-btn {
+    position: absolute;
+    left: 215px;
+    top: 12px;
+    background: #53535336;
+    cursor: pointer;
+    transition: all 0.5s linear;
+  }
+  
+#toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+#toggle-btn.active {
+    left:15px;
+    background:#777;
+  }
+
+  
+/* FIN ESTILO PARA MENU DESPLEGABLE*/
+
+
+/* Estilos específicos para cada tipo de sección */
+.seccion {
+    position: relative;
+    background-attachment: fixed;
+}
+
+.testimonio {
+    width: 44%; /* Mostrar tres testimonios a la vez */
+    margin-left: 10px;
+    flex-shrink: 0; /* Evitar que los testimonios se reduzcan */
+    transition: transform 0.5s ease;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 0 10px 10px; /* Borde redondeado solo en la parte inferior */
+}
+
+.contenedor { /*No hay nada que se llame contenedor*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.columnas {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en múltiples líneas */
+    justify-content: center; /* Centrar las imágenes horizontalmente */
+    border: 2px solid #fff; /* Marco blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 20px; /* Espacio entre el contenido superior */
+    overflow-x: hidden;
+}
+
+.slide {
+    flex: 0 0 calc(33.33% - 20px); /* Tamaño de cada slide (33.33% del ancho menos el margen) */
+    margin: 10px; /* Espacio entre las imágenes */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Transición de transformación */
+}
+
+.slide:hover img {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+}
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid #fff; /* Marco blanco */
+    border-radius: 10px;
+    transition: opacity 0.3s ease; /* Transición de opacidad */
+    opacity: 0; /* Ocultar el marco por defecto */
+}
+
+.slide:hover::after {
+    opacity: 1; /* Mostrar el marco al pasar el ratón */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#formulario-contacto {
+    max-width: 450px; /* Aumenta el ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px 30px; /* Aumenta el padding horizontal */
+    background-color: rgba(200, 200, 200, 0.5); /* Gris transparente */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#formulario-contacto div {
+    margin-bottom: 20px; /* Aumenta el espacio entre elementos */
+}
+
+#formulario-contacto label {
+    display: block; /* Muestra los labels en una línea separada */
+    margin-bottom: 10px; /* Aumenta el espacio entre label y input */
+}
+
+#formulario-contacto input[type="text"],
+#formulario-contacto input[type="email"],
+#formulario-contacto input[type="tel"],
+#formulario-contacto textarea,
+#formulario-contacto select {
+    width: calc(100% - 20px); /* Reduce el ancho de las cajas de texto */
+    padding: 10px; /* Espacio interior */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#formulario-contacto textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+#formulario-contacto input[type="checkbox"] {
+    margin-right: 5px; /* Espacio entre checkbox y label */
+}
+
+#formulario-contacto input[type="submit"] {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espacio interior */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+#formulario-contacto input[type="submit"]:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 1023px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
